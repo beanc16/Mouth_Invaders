@@ -33,9 +33,9 @@
 - [x] Enemies
   - [x] Collision/Trigger Detection
   - [x] Fire Bullets Randomly
-- [ ] States
-  - [ ] Win State
-  - [ ] Lose State
+- [x] States
+  - [x] Win State
+  - [x] Lose State
 
 ## Necessary Polish
 - [ ] Bullet

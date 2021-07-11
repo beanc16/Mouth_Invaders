@@ -75,4 +75,17 @@ public class BulletManager : MonoBehaviour
 
         return null;
     }
+
+
+
+    public void DisableAllBullets()
+    {
+        foreach (Bullet bullet in enemyBullets)
+        {
+            if (bullet.gameObject.activeSelf)
+            {
+                bullet.gameObject.SetActive(false);
+            }
+        }
+    }
 }

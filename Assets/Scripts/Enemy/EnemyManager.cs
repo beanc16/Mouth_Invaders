@@ -15,6 +15,22 @@ public class EnemyManager : MonoBehaviour
 
     private bool isFiring = false;
 
+    public bool allEnemiesAreDead
+    {
+        get
+        {
+            foreach (Enemy enemy in enemies)
+            {
+                if (enemy.gameObject.activeSelf)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    }
+
     private void Awake()
     {
         InitializeComponents();
@@ -45,8 +61,11 @@ public class EnemyManager : MonoBehaviour
         yield return WaitMinMaxSeconds();
 
         // Fire a bullet from a random enemy
-        Enemy enemy = GetRandomEnemy();
-        enemy.FireBullet();
+        if (!allEnemiesAreDead)
+        {
+            Enemy enemy = GetRandomEnemy();
+            enemy.FireBullet();
+        }
 
         isFiring = false;
     }

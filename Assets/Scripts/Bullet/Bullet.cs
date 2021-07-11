@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
 
     private Renderer renderer;
     private HorizontalMover player;
+    private StateManager stateManager;
 
     private bool isOffScreen
     {
@@ -38,6 +39,10 @@ public class Bullet : MonoBehaviour
         if (player == null)
         {
             player = FindObjectOfType<HorizontalMover>();
+        }
+        if (stateManager == null)
+        {
+            stateManager = FindObjectOfType<StateManager>();
         }
 
         this.gameObject.SetActive(false);
@@ -136,6 +141,9 @@ public class Bullet : MonoBehaviour
             // Hide the enemy and this bullet
             enemy.Hide();
             this.StopMoving();
+
+            // Try to activate the win state
+            stateManager.TryToWin();
         }
 
         // Hit a player with an enemy bullet

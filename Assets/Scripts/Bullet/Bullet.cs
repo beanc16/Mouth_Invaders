@@ -130,15 +130,22 @@ public class Bullet : MonoBehaviour
         Enemy enemy = other.GetComponent<Enemy>();
         HorizontalMover player = other.GetComponent<HorizontalMover>();
 
+        // Hit an enemy with a player bullet
         if (enemy != null && isPlayerBullet)
         {
+            // Hide the enemy and this bullet
             enemy.Hide();
             this.StopMoving();
         }
 
-        else if (player != null)
+        // Hit a player with an enemy bullet
+        else if (player != null && !isPlayerBullet)
         {
-            Debug.Log("Hit player!");
+            // Lose a life
+            LivesTracker livesTracker = player.GetComponent<LivesTracker>();
+            livesTracker.LoseLife();
+
+            // Hide this bullet
             this.StopMoving();
         }
     }

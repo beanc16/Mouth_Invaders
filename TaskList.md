@@ -19,25 +19,30 @@
 # Gameplay
 
 ## Worst Case Scenario (Need to Ship)
-- [ ] Character
+- [x] Character
   - [x] Move
   - [x] Shoot a Bullet
   - [x] Collision/Trigger Detection (for enemy bullets)
-  - [ ] Lives
-- [ ] Bullet
+  - [x] Lives
+- [x] Bullet
   - [x] Movement
   - [x] Went off screen
-  - [ ] Collision/Trigger Detection
+  - [x] Collision/Trigger Detection
     - [x] Hit Enemy
-    - [ ] Hit Player
-- [ ] Enemies
+    - [x] Hit Player
+- [x] Enemies
   - [x] Collision/Trigger Detection
   - [x] Fire Bullets Randomly
+- [ ] States
+  - [ ] Win State
+  - [ ] Lose State
 
 ## Necessary Polish
 - [ ] Bullet
   - [ ] If enemy bullet collides with player bullet, set both inactive
   - [ ] Sprite
+- [ ] Score
+  - [ ] 100 points per enemy hit
 - [ ] Enemies
   - [ ] Sprite
 - [ ] Character
@@ -72,7 +77,7 @@
 # UI
 
 ## Worst Case Scenario (Need to Ship)
-- [ ] Lives
+- [x] Lives
 
 ## Necessary Polish
 - [ ] Score

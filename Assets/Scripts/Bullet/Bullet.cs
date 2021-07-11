@@ -134,6 +134,7 @@ public class Bullet : MonoBehaviour
     {
         Enemy enemy = other.GetComponent<Enemy>();
         HorizontalMover player = other.GetComponent<HorizontalMover>();
+        Bullet bullet = other.GetComponent<Bullet>();
 
         // Hit an enemy with a player bullet
         if (enemy != null && isPlayerBullet)
@@ -155,6 +156,18 @@ public class Bullet : MonoBehaviour
 
             // Hide this bullet
             this.StopMoving();
+        }
+
+        // An enemy and player bullet collided
+        else if (bullet != null)
+        {
+            if ((this.isPlayerBullet && !bullet.isPlayerBullet) ||
+                    (!this.isPlayerBullet && bullet.isPlayerBullet))
+            {
+                // Hide both bullets
+                this.StopMoving();
+                bullet.StopMoving();
+            }
         }
     }
 }

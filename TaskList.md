@@ -39,7 +39,7 @@
 
 ## Necessary Polish
 - [ ] Bullet
-  - [ ] If enemy bullet collides with player bullet, set both inactive
+  - [x] If enemy bullet collides with player bullet, set both inactive
   - [ ] Sprite
 - [ ] Score
   - [ ] 100 points per enemy hit

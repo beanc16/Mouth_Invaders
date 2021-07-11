@@ -41,12 +41,12 @@
 - [ ] Bullet
   - [x] If enemy bullet collides with player bullet, set both inactive
   - [ ] Sprite
-- [ ] Score
-  - [ ] 100 points per enemy hit
-- [ ] Enemies
-  - [ ] Sprite
-- [ ] Character
-  - [ ] Sprite
+- [x] Score
+  - [x] 100 points per enemy hit
+- [x] Enemies
+  - [x] Sprite
+- [x] Character
+  - [x] Sprite
 
 ## Nice to Have
 - [ ] Enemy
@@ -62,9 +62,9 @@
 # AI
 
 ## Necessary Polish
-- [ ] Enemies
-  - [ ] AI Movement
-  - [ ] Detect when at edge of screen
+- [x] Enemies
+  - [x] AI Movement
+  - [x] Detect when at edge of screen
 
 <br />
 
@@ -76,8 +76,8 @@
 - [x] Lives
 
 ## Necessary Polish
-- [ ] Score
-  - [ ] 100 points per enemy hit
+- [x] Score
+  - [x] 100 points per enemy hit
 - [x] SceneHandler Script
   - [x] LoadScene()
   - [x] ExitGame()

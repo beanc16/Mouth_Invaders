@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
 
     private Renderer renderer;
     private HorizontalMover player;
+    private ScoreTracker scoreTracker;
     private StateManager stateManager;
 
     private bool isOffScreen
@@ -40,6 +41,10 @@ public class Bullet : MonoBehaviour
         {
             player = FindObjectOfType<HorizontalMover>();
         }
+        if (scoreTracker == null)
+        {
+            scoreTracker = FindObjectOfType<ScoreTracker>();
+        }
         if (stateManager == null)
         {
             stateManager = FindObjectOfType<StateManager>();
@@ -59,13 +64,13 @@ public class Bullet : MonoBehaviour
         Vector3 newPosition = Vector3.zero;
         if (isPlayerBullet)
         {
-            newPosition = player.transform.position + (player.transform.up / 1.5f);
+            newPosition = player.transform.position + (player.transform.up * -0.8f);
         }
         else
         {
             if (enemy != null)
             {
-                newPosition = enemy.transform.position + (enemy.transform.up * -1);
+                newPosition = enemy.transform.position + (enemy.transform.up * -0.5f);
             }
             else
             {
@@ -143,6 +148,9 @@ public class Bullet : MonoBehaviour
             enemy.Hide();
             this.StopMoving();
 
+            // Update score
+            scoreTracker.IncreaseScore();
+
             // Try to activate the win state
             stateManager.TryToWin();
         }
@@ -167,6 +175,9 @@ public class Bullet : MonoBehaviour
                 // Hide both bullets
                 this.StopMoving();
                 bullet.StopMoving();
+
+                // Update score
+                scoreTracker.IncreaseScore();
             }
         }
     }

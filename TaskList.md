@@ -21,16 +21,18 @@
 ## Worst Case Scenario (Need to Ship)
 - [ ] Character
   - [x] Move
-  - [ ] Shoot a Bullet
+  - [x] Shoot a Bullet
   - [ ] Collision/Trigger Detection (for enemy bullets)
   - [ ] Lives
 - [ ] Bullet
-  - [ ] Movement
+  - [x] Movement
+  - [x] Went off screen
   - [ ] Collision/Trigger Detection
-    - [ ] Hit enemy
-    - [ ] Went off screen
+    - [x] Hit Enemy
+    - [ ] Hit Player
 - [ ] Enemies
-  - [ ] Collision/Trigger Detection
+  - [x] Collision/Trigger Detection
+  - [ ] Fire Bullets Randomly
 
 ## Necessary Polish
 - [ ] Enemies

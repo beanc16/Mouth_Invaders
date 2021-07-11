@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    static InputAxisRawAsButton fireInputAsButton = new InputAxisRawAsButton("Fire1");
+
+
+
     /*
      * Inputs
      */
@@ -13,6 +17,14 @@ public class InputManager : MonoBehaviour
         get
         {
             return Input.GetAxisRaw("Horizontal");
+        }
+    }
+
+    public static float fireInput
+    {
+        get
+        {
+            return fireInputAsButton.GetAxisRawDown();
         }
     }
 
@@ -43,6 +55,14 @@ public class InputManager : MonoBehaviour
         get
         {
             return horizontalInput == 0;
+        }
+    }
+
+    public static bool shouldFire
+    {
+        get
+        {
+            return fireInput != 0;
         }
     }
 }

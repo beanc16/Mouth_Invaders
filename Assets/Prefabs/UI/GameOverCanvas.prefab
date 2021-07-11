@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 8052682804852081204}
   - component: {fileID: 8052682804852081205}
   m_Layer: 5
-  m_Name: GameOverPanel
+  m_Name: GameOverCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

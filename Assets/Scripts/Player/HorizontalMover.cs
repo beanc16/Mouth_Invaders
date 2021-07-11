@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof (Rigidbody2D))]
+[RequireComponent(typeof (Collider2D))]
 public class HorizontalMover : MonoBehaviour
 {
     [SerializeField, Range(0, 15)]

@@ -20,7 +20,7 @@
 
 ## Worst Case Scenario (Need to Ship)
 - [ ] Character
-  - [ ] Move
+  - [x] Move
   - [ ] Shoot a Bullet
   - [ ] Collision/Trigger Detection (for enemy bullets)
   - [ ] Lives

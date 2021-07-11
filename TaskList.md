@@ -22,7 +22,7 @@
 - [ ] Character
   - [x] Move
   - [x] Shoot a Bullet
-  - [ ] Collision/Trigger Detection (for enemy bullets)
+  - [x] Collision/Trigger Detection (for enemy bullets)
   - [ ] Lives
 - [ ] Bullet
   - [x] Movement
@@ -32,14 +32,15 @@
     - [ ] Hit Player
 - [ ] Enemies
   - [x] Collision/Trigger Detection
-  - [ ] Fire Bullets Randomly
+  - [x] Fire Bullets Randomly
 
 ## Necessary Polish
+- [ ] Bullet
+  - [ ] If enemy bullet collides with player bullet, set both inactive
+  - [ ] Sprite
 - [ ] Enemies
   - [ ] Sprite
 - [ ] Character
-  - [ ] Sprite
-- [ ] Bullet
   - [ ] Sprite
 
 ## Nice to Have

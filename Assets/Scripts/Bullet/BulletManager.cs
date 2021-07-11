@@ -41,7 +41,7 @@ public class BulletManager : MonoBehaviour
 
 
 
-    public void FireBullet(bool isPlayerBullet)
+    public void FireBullet(bool isPlayerBullet, Enemy enemy)
     {
         Bullet bullet;
 
@@ -56,7 +56,7 @@ public class BulletManager : MonoBehaviour
             bullet = GetInactiveBullet(enemyBullets);
         }
 
-        bullet.Fire();
+        bullet.Fire(enemy);
 
         // Fire bullet
     }

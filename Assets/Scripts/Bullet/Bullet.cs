@@ -10,7 +10,6 @@ public class Bullet : MonoBehaviour
     private bool isPlayerBullet = false;
     private bool shouldMove = false;
 
-    private Rigidbody2D bulletRBody;
     private Renderer renderer;
     private HorizontalMover player;
 
@@ -30,10 +29,6 @@ public class Bullet : MonoBehaviour
     private void InitializeComponents()
     {
         // Internal components
-        if (bulletRBody == null)
-        {
-            bulletRBody = GetComponent<Rigidbody2D>();
-        }
         if (renderer == null)
         {
             renderer = GetComponent<Renderer>();
@@ -50,14 +45,34 @@ public class Bullet : MonoBehaviour
 
 
 
-    public void Fire()
+    public void Fire(Enemy enemy)
     {
         // Make the bullet visible
         this.gameObject.SetActive(true);
 
         // Move the bullet in front of player
-        Vector3 newPosition = player.transform.position + player.transform.up;
-        bulletRBody.MovePosition(newPosition);
+        Vector3 newPosition = Vector3.zero;
+        if (isPlayerBullet)
+        {
+            newPosition = player.transform.position + (player.transform.up / 1.5f);
+        }
+        else
+        {
+            if (enemy != null)
+            {
+                newPosition = enemy.transform.position + (enemy.transform.up * -1);
+            }
+            else
+            {
+                Debug.LogWarning("Tried to fire enemy bullet " + 
+                                 "without saying which enemy fired it");
+            }
+        }
+
+        if (!newPosition.Equals(Vector3.zero))
+        {
+            this.transform.position = newPosition;
+        }
 
         // Mark the bullet as moving for FixedUpdate
         shouldMove = true;
@@ -115,7 +130,7 @@ public class Bullet : MonoBehaviour
         Enemy enemy = other.GetComponent<Enemy>();
         HorizontalMover player = other.GetComponent<HorizontalMover>();
 
-        if (enemy != null)
+        if (enemy != null && isPlayerBullet)
         {
             enemy.Hide();
             this.StopMoving();

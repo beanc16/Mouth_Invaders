@@ -26,7 +26,7 @@ public class ControlledBulletShooter : MonoBehaviour
     {
         if (InputManager.shouldFire)
         {
-            bulletManager.FireBullet(true);
+            bulletManager.FireBullet(true, null);
         }
     }
 }

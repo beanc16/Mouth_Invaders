@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca15d5becf3779bd58d6c10db341b8b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 12
+  movementSpeed: 4
   isPlayerBullet: 0
 --- !u!50 &3379883860370876144
 Rigidbody2D:

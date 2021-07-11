@@ -6,17 +6,10 @@
       <a href="#gameplay">Gameplay</a>
     </li>
     <li>
+      <a href="#ai">AI</a>
+    </li>
+    <li>
       <a href="#ui">UI</a>
-    </li>
-    <li>
-      <a href="#miscellaneous">Miscellaneous</a>
-    </li>
-    <li>
-      <a href="#example">Example with SubHeadings</a>
-      <ul>
-        <li><a href="#subheading1">SubHeading 1</a></li>
-        <li><a href="#subheading2">SubHeading 2</a></li>
-      </ul>
     </li>
   </ol>
 </details>
@@ -41,8 +34,6 @@
 
 ## Necessary Polish
 - [ ] Enemies
-  - [ ] AI Movement
-  - [ ] Detect when at edge of screen
   - [ ] Sprite
 - [ ] Character
   - [ ] Sprite
@@ -56,6 +47,20 @@
     - [ ] Enemy Bullet Speeds
     - [ ] Player Bullet Speed
     - [ ] Enemy Movement Speed
+
+<br />
+
+
+# AI
+
+## Worst Case Scenario (Need to Ship)
+
+## Necessary Polish
+- [ ] Enemies
+  - [ ] AI Movement
+  - [ ] Detect when at edge of screen
+
+## Nice to Have
 
 <br />
 
@@ -89,19 +94,3 @@
   - [ ] RestartScene()
 
 <br />
-
-
-
-# Miscellaneous
-
-## Worst Case Scenario (Need to Ship)
-- [ ] Task
-  - [ ] SubTask
-
-## Necessary Polish
-- [ ] Task
-  - [ ] SubTask
-
-## Nice to Have
-- [x] TaskWithCheckmark
-  - [ ] SubTask

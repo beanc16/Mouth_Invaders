@@ -5,6 +5,8 @@ using TMPro;
 
 public class LivesTracker : MonoBehaviour
 {
+    private StateManager stateManager;
+
     [SerializeField, Range(0, 3)]
     private int lives = 3;
     [SerializeField]
@@ -30,13 +32,19 @@ public class LivesTracker : MonoBehaviour
         {
             Debug.LogWarning("Lives text not set");
         }
+
+        stateManager = FindObjectOfType<StateManager>();
     }
 
 
 
     public void LoseLife()
     {
+        // Lose a life and update display text
         lives--;
         livesText.SetText(baseStr + lives);
+        
+        // Try to activate the game over state
+        stateManager.TryToLose();
     }
 }

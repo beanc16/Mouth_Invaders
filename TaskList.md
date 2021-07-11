@@ -26,16 +26,36 @@
 # Gameplay
 
 ## Worst Case Scenario (Need to Ship)
-- [ ] Task
-  - [ ] SubTask
+- [ ] Character
+  - [ ] Move
+  - [ ] Shoot a Bullet
+  - [ ] Collision/Trigger Detection (for enemy bullets)
+  - [ ] Lives
+- [ ] Bullet
+  - [ ] Movement
+  - [ ] Collision/Trigger Detection
+    - [ ] Hit enemy
+    - [ ] Went off screen
+- [ ] Enemies
+  - [ ] Collision/Trigger Detection
 
 ## Necessary Polish
-- [ ] Task
-  - [ ] SubTask
+- [ ] Enemies
+  - [ ] AI Movement
+  - [ ] Detect when at edge of screen
+  - [ ] Sprite
+- [ ] Character
+  - [ ] Sprite
+- [ ] Bullet
+  - [ ] Sprite
 
 ## Nice to Have
-- [ ] Task
-  - [ ] SubTask
+- [ ] Enemy
+  - [ ] Sprite Animation
+  - [ ] Difficulty Settings
+    - [ ] Enemy Bullet Speeds
+    - [ ] Player Bullet Speed
+    - [ ] Enemy Movement Speed
 
 <br />
 
@@ -44,10 +64,11 @@
 # UI
 
 ## Worst Case Scenario (Need to Ship)
-- [ ] Task
-  - [ ] SubTask
+- [ ] Lives
 
 ## Necessary Polish
+- [ ] Score
+  - [ ] 100 points per enemy hit
 - [ ] SceneHandler Script
   - [ ] LoadScene()
   - [ ] ExitGame()

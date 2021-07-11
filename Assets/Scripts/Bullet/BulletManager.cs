@@ -37,9 +37,6 @@ public class BulletManager : MonoBehaviour
         // Initialize enemy bullets
         Bullet[] enemyBulletArray = enemyBulletsContainer.GetComponentsInChildren<Bullet>(true);
         enemyBullets = enemyBulletArray.OfType<Bullet>().ToList();
-
-        // Initialize player
-        player = FindObjectOfType<HorizontalMover>();
     }
 
 
@@ -59,12 +56,7 @@ public class BulletManager : MonoBehaviour
             bullet = GetInactiveBullet(enemyBullets);
         }
 
-        bullet.gameObject.SetActive(true);
-
-        // Move the bullet in front of player
-        Vector3 newPosition = player.transform.position + player.transform.up;
-        Rigidbody2D bulletRBody = bullet.GetComponent<Rigidbody2D>();
-        bulletRBody.MovePosition(newPosition);
+        bullet.Fire();
 
         // Fire bullet
     }

@@ -47,4 +47,14 @@ public class LivesTracker : MonoBehaviour
         // Try to activate the game over state
         stateManager.TryToLose();
     }
+
+    public void Kill()
+    {
+        // Lose all lives and update display text
+        lives = 0;
+        livesText.SetText(baseStr + lives);
+        
+        // Activate the game over state
+        stateManager.TryToLose();
+    }
 }

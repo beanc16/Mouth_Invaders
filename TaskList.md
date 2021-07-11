@@ -61,14 +61,10 @@
 
 # AI
 
-## Worst Case Scenario (Need to Ship)
-
 ## Necessary Polish
 - [ ] Enemies
   - [ ] AI Movement
   - [ ] Detect when at edge of screen
-
-## Nice to Have
 
 <br />
 
@@ -82,23 +78,13 @@
 ## Necessary Polish
 - [ ] Score
   - [ ] 100 points per enemy hit
-- [ ] SceneHandler Script
-  - [ ] LoadScene()
-  - [ ] ExitGame()
-- [ ] Main Menu Scene
-  - [ ] "Play" Button
-    - [ ] Layout
-    - [ ] Functionality
-  - [ ] "Exit" Button
-    - [ ] Layout
-    - [ ] Functionality
-- [ ] Game Scene
-  - [ ] "Main Menu" / "Home" Button
-    - [ ] Layout
-    - [ ] Functionality
-
-## Nice to Have
-- [ ] SceneHandler Script
-  - [ ] RestartScene()
+- [x] SceneHandler Script
+  - [x] LoadScene()
+  - [x] ExitGame()
+- [x] Main Menu Scene
+  - [x] "Play" Button
+  - [x] "Exit" Button
+- [x] Game Scene
+  - [x] "Main Menu" / "Home" Button
 
 <br />
